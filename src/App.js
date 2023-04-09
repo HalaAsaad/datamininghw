@@ -43,17 +43,17 @@ function App() {
   const itemTemplate = (item) => {
     return (
       <div className="col-12">
-        <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
-          <img
-            className={`w-${item?.width || 5} shadow-2border-round`}
-            src={item?.img}
-            alt={item?.title}
-          />
+        <div className="xl:flex-row xl:align-items-start p-4 gap-4">
           <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-2">
             <h3>
               {item?.title}: {item?.details || ""}
             </h3>
           </div>
+          <img
+            className={`w-${item?.width || 5} shadow-2border-round`}
+            src={item?.img}
+            alt={item?.title}
+          />
         </div>
       </div>
     );
